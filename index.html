@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang='en' id='ng-app' ng-app='' ng-controller='FleurEngine'>
+    <head>
+        <script src='/options.js'></script>
+        <!-- 
+        Your blog's config goes here, you can edit it directly or use 
+        the config editor then paste the output here :) -->
+        <script>
+
+            config = {
+                blog : {
+                    title : 'Journal d\' Fleur',
+                    twitter : '@pomke',
+                    facebook : 'pomkenohkan',
+                    frontPagePosts : 5
+                },
+                theme : themes.fleur,
+                backend : backends.staticFile,
+                plugins : []
+            };
+            
+        </script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js'></script>
+        <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css' rel='stylesheet'>
+        <link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <link href='lib/css/fleur.less' rel="stylesheet/less" type="text/css">
+        <script src='lib/js/fleur.js'></script>
+        <title ng-bind='blog.title'></title>
+    </head>
+    <body>
+        
+        <!-- include our theme here -->
+        <div class='contentWrapper' ng-include='theme.template'></div>
+
+        <!-- Fleur config UI -->
+
+    </body>
+</html>
