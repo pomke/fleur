@@ -14,11 +14,11 @@
                     facebook : 'pomkenohkan',
                     frontPagePosts : 5
                 },
-                theme : themes.fleur,
-                backend : backends.staticFile,
+                theme : themes['Fleur Default Theme'],
+                backend : backends['Static File'],
                 plugins : []
             };
-            
+
         </script>
         <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js'></script>
         <script src='//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js'></script>
@@ -29,11 +29,42 @@
         <title ng-bind='blog.title'></title>
     </head>
     <body>
-        
+
         <!-- include our theme here -->
         <div class='contentWrapper' ng-include='theme.template' onload='refreshLess()'></div>
 
         <!-- Fleur config UI -->
+        <div class="modal fleurUI">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3><span data-icon="5" aria-hidden="true"></h3>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputTitle">Title</label>
+                        <div class="controls">
+                        <input type="text" ng-model='blog.title' id="inputTitle" placeholder="Email">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputTwitter">Twitter</label>
+                        <div class="controls">
+                        <input type="text" ng-model='blog.twitter' id="inputTwitter" placeholder="@yourname">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputFacebook">Facebook</label>
+                        <div class="controls">
+                        <input type="text" ng-model='blog.facebook' id="inputFacebook" placeholder="yourname">
+                    </div>
 
+                </form>
+                <hr/>
+                <strong>Cut and paste config into fleur/index.html</strong>
+                <pre class='config' ng-bind='writeConfig()'></pre>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn">Download</a>
+            </div>
+        </div>
     </body>
 </html>
