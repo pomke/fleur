@@ -8,15 +8,19 @@ var themesList = [
     }
 
 ];
-
+var currentBackend;
 var backendList = [
     {
         title : "Static Files",
-        code : "/backends/static.js"
+        code : "/backends/static.js",
+        conf : []
     },
     {
         title : "Gists",
-        code : "/backends/gist.js"
+        code : "/backends/gist.js",
+        conf : [
+            { id : 'github', label : 'Github Account', type : 'text' }
+        ]
     }
 ];
 

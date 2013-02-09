@@ -1,3 +1,6 @@
+@headerBG: #444;
+@headerFG: #ddd;
+
 body {
     background-color: #777;
 
@@ -10,8 +13,7 @@ body {
 
 .header {
     
-    @headerBG: #444;
-    @headerFG: #ddd;
+
     margin-top: 10px;
 
     .banner {
@@ -24,34 +26,36 @@ body {
         box-shadow: inset 0 0 20px 20px darken(@headerBG, 2%);
 
         h3 {
-            font-family: 'Julius Sans One', serif;
-            -webkit-transition:all .3s;
-            -moz-transition:all .3s;
-            -ms-transition:all .3s;
-            -o-transition:all .3s;
-            transition:all .3s;
+            font-family: 'Julius Sans One', sans-serif;
+            color: @headerFG;
+            -webkit-transition:all 1.3s;
+            -moz-transition:all 1.3s;
+            -ms-transition:all 1.3s;
+            -o-transition:all 1.3s;
+            transition:all 1.3s;
 
         }
         
         .flower {
             margin-bottom: -10px;
             font-size: 100px;
-            -webkit-transition:all .3s;
-            -moz-transition:all .3s;
-            -ms-transition:all .3s;
-            -o-transition:all .3s;
-            transition:all .3s;
-            text-shadow:0 1px 2px rgba(0,0,0,1.5);
+            -webkit-transition:all 1.3s;
+            -moz-transition:all 1.3s;
+            -ms-transition:all 1.3s;
+            -o-transition:all 1.3s;
+            transition:all 1.3s;
+            color: @headerFG;
+            text-shadow:0 1px 20px rgba(255,255,255,1.5);
         }
 
         
         &:hover h3 {
-            color: @headerFG;
+            color: darken(@headerBG, 30%);
         }
 
         &:hover .flower {
-            color: @headerFG;
-            text-shadow:0 1px 20px rgba(255,255,255,1.5);
+            color: darken(@headerBG, 30%);
+            text-shadow:0 1px 2px rgba(0,0,0,1.5);
         }
 
         .media {
@@ -81,4 +85,18 @@ body {
 
     }
 
+}
+
+
+.post {
+
+    background: @headerFG; 
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Droid Sans', sans-serif;
+    border-radius: 0 10px 0 10px;
+
+    h1,h2,h3 {
+        text-decoration: underline;
+    }
 }
