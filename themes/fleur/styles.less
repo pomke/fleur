@@ -11,9 +11,10 @@ body {
 .header {
     
     @headerBG: #444;
+    @headerFG: #ddd;
     margin-top: 10px;
 
-    div {
+    .banner {
         border-radius: 10px;
         background-color: @headerBG;
         text-align: center;
@@ -24,19 +25,60 @@ body {
 
         h3 {
             font-family: 'Julius Sans One', serif;
+            -webkit-transition:all .3s;
+            -moz-transition:all .3s;
+            -ms-transition:all .3s;
+            -o-transition:all .3s;
+            transition:all .3s;
+
         }
         
         .flower {
             margin-bottom: -10px;
             font-size: 100px;
-            -webkit-transition: color 2s linear;
-            transition: color 2s linear;
+            -webkit-transition:all .3s;
+            -moz-transition:all .3s;
+            -ms-transition:all .3s;
+            -o-transition:all .3s;
+            transition:all .3s;
+            text-shadow:0 1px 2px rgba(0,0,0,1.5);
         }
 
         
+        &:hover h3 {
+            color: @headerFG;
+        }
+
         &:hover .flower {
-            color: #ddd;
+            color: @headerFG;
+            text-shadow:0 1px 20px rgba(255,255,255,1.5);
+        }
+
+        .media {
+            min-height: 65px;
+            background-color: lighten(@headerBG, 60%);
+            border-radius: 0 0 10px 10px;
+            .desc { 
+            font-family: 'Julius Sans One', serif;
+                display: absolute;
+            }
+            span {
+                float: right;
+                margin-top: 10px;
+                margin-right: 5px;
+                font-size: 345%;
+                color: @headerBG;
+                -webkit-transition:all .3s;
+                -moz-transition:all .3s;
+                -ms-transition:all .3s;
+                -o-transition:all .3s;
+                transition:all .3s;
+                &:hover {
+                    color: lighten(@headerBG, 20%);
+                }
+            }
         }
 
     }
+
 }

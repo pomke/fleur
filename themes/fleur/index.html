@@ -2,9 +2,15 @@
 <link href='/themes/fleur/styles.less' rel='stylesheet/less' tyle='text/css'>
 
 <div class='header'>
-    <div class=''>
-        <span class='flower' data-icon="5" aria-hidden="true">
+    <div class='banner'>
+        <span class='flower' data-icon="5" aria-hidden="true"></span>
         <h3>{{blog.title}}</h3>
+        <div class='media'>
+            <div class='desc' ng-bind='blog.desc'></div>
+            <a ng-if='blog.twitter' ng-href='http://twitter.com/{{blog.twitter}}' target='_blank'><span data-icon="!" aria-hidden="true"></span></a> 
+            <a ng-if='blog.facebook' ng-href='http://facebook.com/{{blog.facebook}}' target='_blank'><span data-icon="#" aria-hidden="true"></span></a> 
+            <a ng-if='blog.github' ng-href='http://github.com/{{blog.github}}' target='_blank'><span data-icon="*" aria-hidden="true"></span></a> 
+        </div>
     </div>
 </div>
 
