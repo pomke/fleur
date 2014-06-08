@@ -1,11 +1,11 @@
 [
 
-    { "id" : "first-post",
-      "title" : "Introduction to Fleur",
+    { "id" : "campjs-may2014",
+      "title" : "CampJS 2014",
       "type" : "md" },
 
-    { "id" : "second-post",
-      "title" : "Configuring  Fleur",
+    { "id" : "first-post",
+      "title" : "Introduction to Fleur",
       "type" : "md" }
 ]
       
